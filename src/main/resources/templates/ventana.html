@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite o Culillo?</title>
+</head>
+<body>
+    <h1>¿Sale Fortnite hoy?</h1>
+	<button id="botonNo" onclick="moverBoton()">No</button>
+    <button onclick="mostrarImagenes()">Sí</button>
+
+    <script>
+		function moverBoton() {
+    		var btnNo = document.getElementById('botonNo');
+    		if (btnNo) {
+        btnNo.style.position = 'absolute';
+        btnNo.style.left = Math.random() * (window.innerWidth - btnNo.clientWidth) + 'px';
+        btnNo.style.top = Math.random() * (window.innerHeight - btnNo.clientHeight) + 'px';
+   	 }
+		}
+
+
+        function mostrarImagenes() {
+            window.location.href = "/imagenes";
+        }
+    </script>
+</body>
+</html>
